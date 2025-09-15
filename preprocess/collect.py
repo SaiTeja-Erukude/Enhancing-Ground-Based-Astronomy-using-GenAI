@@ -7,9 +7,11 @@ from PIL import Image
 from io import BytesIO
 
 # Paths
-HUBBLE_JSON = "../data/hubble_images.json"
-LEGACY_PATH = "../data/raw/legacy-fits"
-CSV_PATH    = "../data/gz_hubble_main.csv"
+HUBBLE_JSON = "/home/e/erukude/Enhancing Ground-Based Astronomy using GenAI/data/test_images.json"
+LEGACY_PATH = "/home/e/erukude/Enhancing Ground-Based Astronomy using GenAI/data/test/legacy-fits"
+CSV_PATH    = "/home/e/erukude/Enhancing Ground-Based Astronomy using GenAI/data/gz_hubble_main.csv"
+
+os.makedirs(LEGACY_PATH, exist_ok=True)
 
 # Load image IDs from JSON
 with open(HUBBLE_JSON, "r") as f:
@@ -36,16 +38,17 @@ for img_id in tqdm(image_ids):
     try:
         response = requests.get(url, timeout=10)
         response.raise_for_status()
-
+        
+        # Save jpgs
         # Convert to grayscale
         # img_gray = Image.open(BytesIO(response.content)).convert("L")
-
-        # Save image with the same name format (e.g., 12345.jpg)
-        save_filename = f"{img_id}.fits"
-        save_path = os.path.join(LEGACY_PATH, save_filename)
-        
+        # save_filename = f"{img_id}_{ra}_{dec}.jpg"
+        # save_path = os.path.join(LEGACY_PATH, save_filename)
         # img_gray.save(save_path)
-        
+
+        # Save FITS
+        save_filename = f"{img_id}_{ra}_{dec}.fits"
+        save_path = os.path.join(LEGACY_PATH, save_filename)        
         with open(save_path, "wb") as f:
             f.write(response.content)
 

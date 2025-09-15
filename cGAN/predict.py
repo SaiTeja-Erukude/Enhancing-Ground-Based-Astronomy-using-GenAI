@@ -45,9 +45,9 @@ def postprocess_image(image_tensor):
 
 
 if __name__ == "__main__":
-    test_dir   = "/home/e/erukude/Ground vs Space Telescopes/data/test/legacy"
-    output_dir = "/home/e/erukude/Ground vs Space Telescopes/cGAN/20K images/predictions/60epochs"
-    model_path = "/home/e/erukude/Ground vs Space Telescopes/cGAN/20K images/cgan_model_1199940.h5"
+    test_dir   = "/home/e/erukude/Enhancing Ground-Based Astronomy using GenAI/data/test/legacy-jpg-64298"
+    output_dir = "/home/e/erukude/Enhancing Ground-Based Astronomy using GenAI/cGAN/20K images/predictions/60epochs_64298"
+    model_path = "/home/e/erukude/Enhancing Ground-Based Astronomy using GenAI/cGAN/20K images/cgan_model_1199940.h5"
 
     os.makedirs(output_dir, exist_ok=True)
 

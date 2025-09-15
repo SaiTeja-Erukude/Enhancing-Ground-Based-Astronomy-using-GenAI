@@ -24,13 +24,13 @@ def visualize_comparison(ground_image, pred_image, space_image, save_path=None):
     Optionally save the comparison figure.
     """
     images = [ground_image, pred_image, space_image]
-    titles = ["Ground Telescope Input", "Model Output", "Space Telescope"]
+    titles = ["Ground Telescope", "Enhanced Output", "Space Telescope"]
 
     plt.figure(figsize=(12, 4))
     for i, (img, title) in enumerate(zip(images, titles)):
         plt.subplot(1, 3, i + 1)
         plt.imshow(img, cmap='gray')
-        plt.title(title)
+        plt.title(title, fontdict={"fontsize": 10})
         plt.axis("off")
 
     plt.subplots_adjust(top=0.85, bottom=0.15, wspace=0.05)
@@ -46,7 +46,7 @@ def build_file_map(directory):
     Build a mapping from base filename (without extension) to full path.
     Supports any image extension.
     """
-    supported_exts = ['.png', '.tif', '.tiff', '.jpg', '.jpeg', '.bmp']
+    supported_exts = ['.png', '.tif', '.tiff', '.jpg', '.jpeg']
     file_map = {}
     for fname in os.listdir(directory):
         base, ext = os.path.splitext(fname)
@@ -57,10 +57,10 @@ def build_file_map(directory):
 
 if __name__ == "__main__":
 
-    ground_dir = "/home/e/erukude/Ground vs Space Telescopes/data/test/legacy"
-    preds_dir  = "/home/e/erukude/Ground vs Space Telescopes/cGAN/20K images/predictions/60epochs"
-    space_dir  = "/home/e/erukude/Ground vs Space Telescopes/data/test/hubble"
-    save_dir   = "/home/e/erukude/Ground vs Space Telescopes/cGAN/20K images/predictions/60epochs_comparisions"
+    ground_dir = "/home/e/erukude/Enhancing Ground-Based Astronomy using GenAI/data/test/legacy-jpg-64298"
+    preds_dir  = "/home/e/erukude/Enhancing Ground-Based Astronomy using GenAI/cGAN/20K images/predictions/60epochs_64298"
+    space_dir  = "/home/e/erukude/Enhancing Ground-Based Astronomy using GenAI/data/raw/hubble-tif-84462"
+    save_dir   = "/home/e/erukude/Enhancing Ground-Based Astronomy using GenAI/cGAN/20K images/predictions/60epochs_comparisions_64298"
 
     os.makedirs(save_dir, exist_ok=True)
 

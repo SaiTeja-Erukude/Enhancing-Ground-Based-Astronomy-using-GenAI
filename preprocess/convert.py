@@ -6,7 +6,7 @@ import numpy            as np
 import tifffile
 
 
-def convert_fits_to_tiff(in_dir, out_dir):
+def convert_fits_to_tif(in_dir, out_dir):
     
     for filename in tqdm(os.listdir(in_dir)):
         if filename.lower().endswith((".fits")):
@@ -29,7 +29,7 @@ def convert_fits_to_tiff(in_dir, out_dir):
     
     
     
-def convert_tiff_to_jpg(in_dir, out_dir):
+def convert_tif_to_jpg(in_dir, out_dir):
     
     for filename in tqdm(os.listdir(in_dir)):
         if filename.lower().endswith(('.tif', '.tiff')):
@@ -58,11 +58,12 @@ def convert_tiff_to_jpg(in_dir, out_dir):
                 print(f"Failed to convert {filename}: {e}")
 
 
+
 if __name__ == "__main__":
 
-    INPUT_DIR = "../data/train/legacy-fits"
-    OUTPUT_DIR = "../data/train/legacy"
+    INPUT_DIR  = "/home/e/erukude/Enhancing Ground-Based Astronomy using GenAI/data/test/legacy-fits-64298"
+    OUTPUT_DIR = "/home/e/erukude/Enhancing Ground-Based Astronomy using GenAI/data/test/legacy-tif-64298"
     
     os.makedirs(OUTPUT_DIR, exist_ok=True)
 
-    convert_fits_to_tiff(INPUT_DIR, OUTPUT_DIR)
+    convert_fits_to_tif(INPUT_DIR, OUTPUT_DIR)
