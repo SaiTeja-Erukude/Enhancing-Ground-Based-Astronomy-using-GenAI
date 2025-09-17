@@ -35,8 +35,8 @@ cd galaxy-enhancer
 ### 2. Set Up a Virtual Environment
 
 ```bash
-python -m venv venv
-venv\Scripts\activate  # For Windows
+python3.8 -m venv .venv
+.venv\Scripts\activate  # For Windows
 ```
 
 ### 3. Install Dependencies
