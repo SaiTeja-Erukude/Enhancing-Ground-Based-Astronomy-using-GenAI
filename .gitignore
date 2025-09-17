@@ -4,3 +4,4 @@ __pycache__
 notes.txt
 data
 cGAN/models
+galaxy_enhancer/model
