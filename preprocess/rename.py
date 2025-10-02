@@ -77,8 +77,40 @@ def rename_files_with_coords(input_dir: str, coords_csv: str) -> bool:
         return False
 
 
+def remove_id_from_filename(input_dir):
+    try:        
+        if not os.path.isdir(input_dir):
+            print(f"The directory {input_dir} does not exist.")
+            return False
+        
+        for file in tqdm(os.listdir(input_dir)):
+            basename, ext = os.path.splitext(file)
+            
+            parts = len(basename.split("_"))
+            if parts < 3:
+                continue
+            
+            new_name = "_".join(basename.split("_")[1:]) + ext
+            
+            # Construct full paths for renaming
+            old_file_path = os.path.join(input_dir, file)
+            new_file_path = os.path.join(input_dir, new_name)
+            
+            # Remove if already exists
+            if os.path.exists(new_file_path):
+                os.remove(new_file_path)
+            
+            # Rename the file
+            os.rename(old_file_path, new_file_path)
+        return True
+    
+    except Exception as rename_ex:
+        print(f"An error occurred while renaming: {rename_ex}")
+        return False
+
+
 
 if __name__ == "__main__":
-    input_dir  = "/home/e/erukude/Enhancing Ground-Based Astronomy using GenAI/data/raw/hubble-tif-84462"
-    coords_csv = "/home/e/erukude/Enhancing Ground-Based Astronomy using GenAI/data/gz_hubble_main.csv"
-    rename_files_with_coords(input_dir, coords_csv)
+    input_dir  = ""
+    coords_csv = ""
+    remove_id_from_filename(input_dir)

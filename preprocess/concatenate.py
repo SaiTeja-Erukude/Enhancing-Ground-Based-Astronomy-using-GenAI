@@ -58,9 +58,9 @@ def concatenate_images(image1_path: str, image2_path: str, output_path: str) -> 
 
 if __name__ == "__main__":
     
-    legacy_images = "../data/train/legacy"    
-    hubble_images = "../data/train/hubble"
-    output_path   = "../data/train/concat"
+    legacy_images = ""    
+    hubble_images = ""
+    output_path   = ""
     
     # Make sure output directory exists
     os.makedirs(output_path, exist_ok=True)

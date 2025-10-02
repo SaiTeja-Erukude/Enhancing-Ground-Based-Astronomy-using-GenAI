@@ -1,8 +1,8 @@
 # 🌌 Galaxy Enhancer
 
-> **Enhance ground-based astronomical images with the power of Generative AI.**
+> **Amplifying the imaging power of ground-based telescopes with space-based telescopes data and generative AI.**
 
-This project allows you to download ground-based telescope image data using celestial coordinates (RA/Dec), convert it into a usable image format, and enhance it using a custom-trained Conditional Generative Adversarial Network.
+This project facilitates the download of ground-based telescope imagery based on celestial coordinates (RA/Dec), converts it into a usable image format, and enhances it by utilizing contextual information from space-based telescopes using a custom-trained Conditional Generative Adversarial Network (cGAN).
 
 The cGAN model was trained on paired images from ground-based and space-based telescopes, with the goal of transforming ground-based observations to match the quality and clarity of space-based imagery.
 
@@ -19,7 +19,20 @@ The cGAN model was trained on paired images from ground-based and space-based te
 ---
 
 ## 📷 Sample Outputs
-Coming soon ...
+
+Here are some sample outputs from our model, demonstrating its ability to enhance ground-based images to a quality that closely resembles space-based observations. Impressively, the model maintains high performance even when the input lacks clear visual details of the galaxy.
+
+<p align="center">
+  <img src="samples/catalog_samples0.jpg" alt="Catalog Sample 1" height="450px" style="margin-right: 30px;" />
+  <img src="samples/catalog_samples1.jpg" alt="Catalog Sample 2" height="450px" />
+</p>
+
+
+---
+
+## 📊 Data Availability
+
+The cGAN model, train dataset and a catalog of 63,202 enhanced images are available at: [https://doi.org/10.6084/m9.figshare.30226591](https://doi.org/10.6084/m9.figshare.30226591)
 
 ---
 

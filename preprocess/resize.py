@@ -33,8 +33,8 @@ def resize_image(input_img_path: str, output_img_path: str) -> bool:
 
 if __name__ == "__main__":
 
-    input_dir = "../data/hubble-old"
-    output_dir = "../data/hubble"
+    input_dir  = ""
+    output_dir = ""
 
     os.makedirs(output_dir, exist_ok=True)
 

@@ -61,8 +61,8 @@ def convert_tif_to_jpg(in_dir, out_dir):
 
 if __name__ == "__main__":
 
-    INPUT_DIR  = "/home/e/erukude/Enhancing Ground-Based Astronomy using GenAI/data/test/legacy-fits-64298"
-    OUTPUT_DIR = "/home/e/erukude/Enhancing Ground-Based Astronomy using GenAI/data/test/legacy-tif-64298"
+    INPUT_DIR  = ""
+    OUTPUT_DIR = ""
     
     os.makedirs(OUTPUT_DIR, exist_ok=True)
 

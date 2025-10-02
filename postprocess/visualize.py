@@ -57,10 +57,10 @@ def build_file_map(directory):
 
 if __name__ == "__main__":
 
-    ground_dir = "/home/e/erukude/Enhancing Ground-Based Astronomy using GenAI/data/test/legacy-jpg-64298"
-    preds_dir  = "/home/e/erukude/Enhancing Ground-Based Astronomy using GenAI/cGAN/20K images/predictions/60epochs_64298"
-    space_dir  = "/home/e/erukude/Enhancing Ground-Based Astronomy using GenAI/data/raw/hubble-tif-84462"
-    save_dir   = "/home/e/erukude/Enhancing Ground-Based Astronomy using GenAI/cGAN/20K images/predictions/60epochs_comparisions_64298"
+    ground_dir = ""
+    preds_dir  = ""
+    space_dir  = ""
+    save_dir   = ""
 
     os.makedirs(save_dir, exist_ok=True)
 

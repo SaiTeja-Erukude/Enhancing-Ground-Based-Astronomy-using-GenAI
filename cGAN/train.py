@@ -52,7 +52,7 @@ def load_images(path, size=(512, 256)):
 
 
 # dataset path
-DATA_PATH = "../../data/train/concat"
+DATA_PATH = ""
 EPOCHS = 100
 
 # load dataset

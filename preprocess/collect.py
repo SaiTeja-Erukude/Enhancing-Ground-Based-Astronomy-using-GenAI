@@ -7,9 +7,9 @@ from PIL import Image
 from io import BytesIO
 
 # Paths
-HUBBLE_JSON = "/home/e/erukude/Enhancing Ground-Based Astronomy using GenAI/data/test_images.json"
-LEGACY_PATH = "/home/e/erukude/Enhancing Ground-Based Astronomy using GenAI/data/test/legacy-fits"
-CSV_PATH    = "/home/e/erukude/Enhancing Ground-Based Astronomy using GenAI/data/gz_hubble_main.csv"
+HUBBLE_JSON = ""
+LEGACY_PATH = ""
+CSV_PATH    = ""
 
 os.makedirs(LEGACY_PATH, exist_ok=True)
 

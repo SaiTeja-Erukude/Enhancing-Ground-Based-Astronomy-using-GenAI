@@ -87,11 +87,11 @@ def process_n_random_file_pairs(
 
 if __name__ == "__main__":
     
-    src1  = "../data/train/legacy-fits"
-    dest1 = "../data/test/legacy-fits"
+    src1  = ""
+    dest1 = ""
     
-    src2  = "../data/train/hubble"
-    dest2 = "../data/test/hubble"
+    src2  = ""
+    dest2 = ""
     
     n    = 3420
     mode = "move"
